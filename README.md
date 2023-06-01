@@ -1,4 +1,4 @@
-# Lista de copras dinâmica feita em python
+# Lista de compras dinâmica feita em python
 * funcional
 * simples
 * prática
