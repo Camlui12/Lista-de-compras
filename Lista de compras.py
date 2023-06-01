@@ -29,17 +29,26 @@ while True:
                 try:
                     item = int(input('Qual o índice do item que você quer apagar?\n'))
                     os.system('cls')
-                    print(lc.pop(item), 'foi apagado da lista de compras!')
-                except:
+                    print(lc.pop(item), 'foi apagado da lista de compras!\n')
+                except IndexError:
                     os.system('cls')
-                    print('Este índice não existe! ')
+                    print('Este índice não existe na lista!\n ')
+                except ValueError:
+                    os.system('cls')
+                    print('Digite apenas números para o índice!\n ')
+                except Exception:
+                    os.system('cls')
+                    print('Erro desconhecido!\n')
+                    continue
 
             if cmd == 'l':
                 os.system('cls')
                 if len(lc) > 0:
+                    print('Lista de compras!')
                     for i in indice:
-                        print(i, lc[i],'\n')
-                        continue
+                        print(i, lc[i])
+                    print(' ')
+                    continue
                 else:
                     os.system('cls')
                     print('Não há nada para ser mostrado!\n ')
